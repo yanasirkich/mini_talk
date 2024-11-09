@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:55:49 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/11/09 04:02:37 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/11/09 05:03:42 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ int	main(int argc, char **argv)
 	int	pid;
 
 	if (argc != 3)
+	{
 		ft_putstr_fd("Error. Not enough or too many arguments.", 2);
+		exit(EXIT_FAILURE);
+
+	}
 	else
 	{	
 		pid = ft_atoi(argv[1]); //test if it works as intended

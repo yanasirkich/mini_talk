@@ -6,7 +6,7 @@
 #    By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 14:00:26 by ysirkich          #+#    #+#              #
-#    Updated: 2024/11/09 04:46:50 by ysirkich         ###   ########.fr        #
+#    Updated: 2024/11/09 04:51:43 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,9 @@ $(CLIENT): client.o $(LIBFT)
 	@$(CC) $(CFLAGS) client.o $(LIBS) -o $(CLIENT)
 	@echo "$(CLIENT) created successfully!"
 
-# server.o: server.c minitalk.h check without it and comment out if it doesnt work
-# client.o: client.c minitalk.h
+# Dependencies to trigger recompiling if needed
+server.o: server.c minitalk.h
+client.o: client.c minitalk.h
 
 # Building libft
 $(LIBFT):
