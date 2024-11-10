@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:55:49 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/11/09 05:03:42 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/11/10 12:54:33 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static void	send_signal(pid_t pid, char *text);
 static void	send_character_bits(pid_t pid, char c);
+static int 	safe_kill(pid_t pid, int signal);
 
 int	main(int argc, char **argv)
 {
@@ -61,11 +62,11 @@ static void	send_character_bits(pid_t pid, char c)
 	}
 }
 
-int safe_kill(pid_t pid, int signal)
+static int safe_kill(pid_t pid, int signal)
 {
 	if (kill(pid, signal) == -1)
 	{
-		fd_putstr_fd("Error. Failed to send a signal.\n", 2);
+		ft_putstr_fd("Error. Failed to send a signal.\n", 2);
 		exit(EXIT_FAILURE);
 	}
 	return (0);

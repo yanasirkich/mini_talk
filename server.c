@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:56:01 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/11/10 12:50:52 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/11/10 12:53:17 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	ft_putstr_fd("Welcome to my Minitalk server!\n", 2);
 	ft_putstr_fd("Server PID:", 2);
 	put_pid(getpid()); //todo
-	fd_putstr_fd("\n", 2);
+	ft_putstr_fd("\n", 2);
 	while (1) //infinite loop to keep the server running
 		pause();  //would need to check the reliablity of this approach
 	return (0);	 
@@ -36,6 +36,7 @@ static void	signal_handler(int signal)
 	static int	current_char = 0; //shifts left by 1 to make space for the new bit
 	int			bit;
 
+	bit = 0;
 	if (signal == SIGUSR1)
 		bit = 0;
 	else if (signal == SIGUSR2)
