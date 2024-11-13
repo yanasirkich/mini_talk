@@ -6,12 +6,11 @@
 #    By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 14:00:26 by ysirkich          #+#    #+#              #
-#    Updated: 2024/11/09 04:51:43 by ysirkich         ###   ########.fr        #
+#    Updated: 2024/11/13 12:33:05 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compiler
-NAME = mini_talk
 SERVER = server
 CLIENT = client
 CC = gcc
@@ -22,6 +21,8 @@ INCLUDE	=-I. -Ilibft
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBS = -L$(LIBFT_DIR)	-lft
+
+all: $(SERVER) $(CLIENT)
 
 # Rues 
 .c.o:
