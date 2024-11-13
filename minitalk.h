@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:02:24 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/11/09 05:46:13 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:54:58 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <unistd.h>
 # include <signal.h>
 # include <stdlib.h>
-
-struct sigaction sigact;
 
 /*
 struct sigaction {

@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:55:49 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/11/10 12:54:33 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:00:37 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	send_character_bits(pid_t pid, char c)
 			safe_kill(pid, SIGUSR1);
 		else
 			safe_kill(pid, SIGUSR2);
-		usleep(100); //100-microsecond delay between signals
+		usleep(200); //100-microsecond delay between signals
 		bit_position--;
 	}
 }
